@@ -1,6 +1,7 @@
 from __future__ import unicode_literals
 
 from django.db import models
+from django.contrib.auth.models import User
 
 # Create your models here.
 class City(models.Model):
@@ -8,13 +9,6 @@ class City(models.Model):
 
     def __str__(self):
         return self.name
-
-
-class DateRental(models.Model):
-    date = models.DateField()
-
-    def __str__(self):
-        return self.date
 
 class Guest(models.Model):
     name = models.CharField(max_length=50)
@@ -25,7 +19,6 @@ class Guest(models.Model):
         return self.name
 
 class Reservation(models.Model):
-    dateReservation = models.DateField()
     code = models.CharField(max_length=50)
     total = models.IntegerField()
 
@@ -39,9 +32,16 @@ class Property(models.Model):
     title = models.CharField(max_length=50)
     numberCard = models.IntegerField()
     maxGuest = models.IntegerField()
-    dateRental = models.ManyToManyField(DateRental)
     city = models.ForeignKey(City)
     reservation = models.ForeignKey(Reservation)
+    user = models.ForeignKey(User)
 
     def __str__(self):
         return self.title
+class DateRental(models.Model):
+    date = models.DateField()
+    property = models.ForeignKey(Property)
+    reservation = models.ForeignKey(Reservation)
+
+    def __str__(self):
+        return self.date
