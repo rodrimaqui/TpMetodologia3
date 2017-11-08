@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>y que</title>
+	</head>
+	<body>
+		<h1>Rooms for rent!!!!!!!</h1>
+		<div class="container">
+			<div class="row">
+			 	<form method="post"> {% csrf_token %}
+
+			        <input type="text" name="city" placeholder="City"><br>
+			        <input type="text" name="pax" placeholder="Guest amount"><br>
+			        <input type="date" name="fecha"><br>
+
+			        <input type="submit" value="Check for rooms">
+     			</form>
+     		</div>
+		</div>
+	</body>
+</html>
