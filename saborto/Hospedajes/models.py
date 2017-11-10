@@ -32,20 +32,21 @@ class Property(models.Model):
     def __str__(self):
         return self.title
 
-class DateRental(models.Model):
-    date = models.DateField()
-    property = models.ForeignKey(Property)
-    #reservation = models.ForeignKey(Reservation)
-
-    '''def __str__(self):
-        return self.date'''
-
 class Reservation(models.Model):
     code = models.CharField(max_length=50)
     total = models.IntegerField()
     property = models.ForeignKey(Property)
-    dateRental = models.ForeignKey(DateRental)
     guest = models.ForeignKey(Guest)
 
     def __str__(self):
         return self.code
+
+class DateRental(models.Model):
+    date = models.DateField()
+    property = models.ForeignKey(Property)
+    reservation = models.ForeignKey(Reservation, blank=True, null=True)
+
+    '''def __str__(self):
+        return self.date'''
+
+
