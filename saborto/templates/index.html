@@ -1,22 +1,21 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<!--<link rel="stylesheet" href="css/materialize.css">
+		<link rel="stylesheet" href="css/materialize.min.css">-->
 		<meta charset="utf-8">
-		<title>y que</title>
+		<title>Sooper habitaciones</title>
 	</head>
 	<body>
-		<h1>Rooms for rent!!!!!!!</h1>
-		<div class="container">
-			<div class="row">
-			 	<form method="post" action=""> {% csrf_token %}
-
-			        <input type="text" name="city" placeholder="City"><br>
-			        <input type="text" name="pax" placeholder="Guest amount"><br>
-			        <input type="date" name="fecha"><br>
-
-			        <input type="submit" value="Check for rooms">
-     			</form>
-     		</div>
-		</div>
+	  <nav>
+	    <div class="nav-wrapper negrita">
+	        <ul class="left hide-on-med-and-down">
+	          <li><a href="search_rooms">Rooms for rent</a></li>
+	        </ul>
+	    </div>
+	  </nav>
+	  <div class="">
+	  	{% block content %}{% endblock %}
+	  </div>
 	</body>
 </html>

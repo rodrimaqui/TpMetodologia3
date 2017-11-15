@@ -1,0 +1,19 @@
+{% extends "index.html" %}
+{% block content %}
+<h1>Rooms for rent!!!!!!!</h1>
+<div class="container">
+	<div class="row">
+		{% for r in rooms %}
+			<div class="negrita card blue-grey darken-1">
+			<div class="card-content">
+				<h2>{{ r.title }}</h2>
+				<p>{{ r.description }}</p>
+				<label>Price: AR${{ r.priceDays }} (per day and person)</label>
+				<label>Capacity: {{ r.maxGuest }} humans</label>
+				<label>City: {{ r.city.name }}</label>
+			</div>
+		    </div>
+	    {% endfor %}
+     </div>
+</div>
+{% endblock %}%}

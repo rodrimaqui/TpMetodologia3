@@ -1,0 +1,17 @@
+{% extends "index.html" %}
+{% block content %}
+<h1>Rooms for rent!!!!!!!</h1>
+<div class="container">
+	<div class="row">
+		<div class="negrita card blue-grey darken-1">
+			<form method="post" action="" class="card-content"> {% csrf_token %}
+				<input type="text" name="city" placeholder="City"><br>
+				<input type="text" name="pax" placeholder="Guest amount"><br>
+				 <input type="date" name="fecha"><br>
+
+				<input type="submit" value="Search for rooms" class="btn waves-effect waves-light right">
+	     	</form>
+	    </div>
+     </div>
+</div>
+{% endblock %}%}
