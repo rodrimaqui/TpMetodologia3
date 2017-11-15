@@ -11,4 +11,5 @@ def search_rooms_view(request):
 
 def show_rooms_view(request):
 	habitacion_mockeada=Property(description='esta re piola man te re combiene', priceDays=500, image='', title='casa super cheta por la perla', numberCard=0, maxGuest=20, city=City(name='Mar del Plata'), user=User())
-	return render(request, 'show_rooms.html', {'rooms': habitacion_mockeada})
+	lista_mockeada_ajajaj = [habitacion_mockeada]
+	return render(request, 'show_rooms.html', {'rooms': lista_mockeada_ajajaj})
