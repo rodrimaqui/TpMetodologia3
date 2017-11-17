@@ -4,20 +4,26 @@
 	<head>
 		
 	    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
-
+	    <!--<link rel="stylesheet" href="{% static 'css/materialize.min.css' %}">
+		<link rel="stylesheet" href="{% static 'css/materialize.css' %}">-->
 		<meta charset="utf-8">
 		<title>Sooper habitaciones</title>
 	</head>
-	<body style="font-family: sans-serif">
+	<body style="background-color:#e0f7fa;">
 	  <nav>
-	    <div class="nav-wrapper green darken-3">
+	    <div class="nav-wrapper"  style="background:linear-gradient(to right, #ff9966 0%, #84ffff 100%);">
+	    	<label class="brand-logo right" style="color:black; text-shadow: 3px 2px 0px #84ffff;"><b><i>Piola Hospedaje</i></b></label>
 	        <ul class="left hide-on-med-and-down">
-	          <li><a href="search_rooms"><b>Rooms for rent</b></a></li>
+	          <li><a href="search_rooms"><b style="color:black">Rooms for rent</b></a></li>
 	        </ul>
 	    </div>
 	  </nav>
-	  <div class="">
+
+
+
+	  <div>
 	  	{% block content %}{% endblock %}
 	  </div>
+	  
 	</body>
 </html>

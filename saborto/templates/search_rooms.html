@@ -1,17 +1,45 @@
 {% extends "index.html" %}
 {% block content %}
-<h1>Rooms for rent!!!!!!!</h1>
-<div class="container">
+<!--<div class="container">-->
+<style type="text/css">
+	li:hover {
+		background-color: #84ffff  !important;
+	}
+	.collection {
+		border: 0px solid #e0e0e0;
+	}
+	.collection .collection-item {
+		border-bottom: 0px solid #e0e0e0;
+	}
+</style>
+
+
 	<div class="row">
-		<div class="negrita card blue-grey darken-1">
-			<form method="post" action="" class="card-content"> {% csrf_token %}
+	<div class="col l2">
+		<h4 style="text-shadow: 3px 2px 0px #ff9966;">Cities</h4>
+		<ul class="collection"><b>
+		    <li style="background-color: #e0f7fa;" class="collection-item">Buenos Aires (CABA)</li>
+		    <li style="background-color: #e0f7fa;" class="collection-item">Mar del Plata</li>
+		    <li style="background-color: #e0f7fa;" class="collection-item">Santa Clara del Mar</li>
+		    <li style="background-color: #e0f7fa;" class="collection-item">Necochea</li>
+		    <li style="background-color: #e0f7fa;" class="collection-item">Miramar</li>
+		    <li style="background-color: #e0f7fa;" class="collection-item">Rosario</li>
+		    <li style="background-color: #e0f7fa;" class="collection-item">Tandil</li>
+		    <li style="background-color: #e0f7fa;" class="collection-item">Nueva York (?)</li>
+		</ul></b>
+	</div>
+	<div class="col l8">
+	<h2 style="text-shadow: 3px 2px 0px #ff9966;">Search for rooms</h2>
+		<div class="negrita card  deep-orange lighten-2">
+			<form method="get" action="" class="card-content"> {% csrf_token %}
 				<input type="text" name="city" placeholder="City"><br>
 				<input type="text" name="pax" placeholder="Guest amount"><br>
-				 <input type="date" name="fecha"><br>
+				<!--<input type="date" name="fecha">--><br>
 
-				<button type="submit" class="btn waves-effect waves-light right">Search for rooms</button>
+				<button type="submit" class="btn waves-effect waves-light right">Search</button><br>
 	     	</form>
 	    </div>
-     </div>
-</div>
+	</div>    
+    </div>
+<!--</div>-->
 {% endblock %}%}
