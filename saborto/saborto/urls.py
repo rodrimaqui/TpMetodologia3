@@ -20,4 +20,6 @@ from Hospedajes.views import *
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', index),
+    url(r'^search_rooms/', search_rooms_view),
+    url(r'^show_rooms/', show_rooms_view, name = 'a'),
 ]
