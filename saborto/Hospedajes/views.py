@@ -16,5 +16,11 @@ def show_rooms_view(request):
         city = City.objects.filter(name = request.GET['city'])
         pax = request.GET['pax']
         property = Property.objects.filter(city = city[0].id, maxGuest__gte = pax)
+        for indice in range(len(property)):
+        	property[indice].comision = property[indice].priceDays * 0.08 
         return render(request, 'show_rooms.html', {'rooms': property})
+
+def rent(request):
+	if request.method == 'POST':
+		reservation = 
 

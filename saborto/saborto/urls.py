@@ -22,4 +22,5 @@ urlpatterns = [
     url(r'^$', index),
     url(r'^search_rooms/', search_rooms_view, name = 'search'),
     url(r'^show_rooms/', show_rooms_view, name = 'show'),
+    url(r'^show_rooms/.*', rent, name = 'rent'),
 ]
