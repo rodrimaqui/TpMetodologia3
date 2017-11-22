@@ -21,7 +21,7 @@ class Guest(models.Model):
 class Property(models.Model):
     description = models.CharField(max_length=500)
     priceDays = models.IntegerField()
-    image = models.CharField(max_length=70)
+    image = models.ImageField(upload_to='image',max_length=100)
     title = models.CharField(max_length=50)
     numberCard = models.IntegerField()
     maxGuest = models.IntegerField()

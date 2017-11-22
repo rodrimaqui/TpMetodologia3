@@ -8,11 +8,12 @@
 	        <div class="col l6">
 	          <div class="card card light-green darken-2 z-depth-5">
 	            <div class="card-image">
-	              <img src="http://2.bp.blogspot.com/-pkuVXx6FSIU/UZfoYnecYtI/AAAAAAAAeGQ/GPpxJSCPUB8/s1600/rancho-de-tres-pisos.jpg" class="responsive-img">
+
+	              <img src="{{r.image.url}}" class="responsive-img">
 	              <span class="card-title"><b style="text-shadow: 3px 2px 0px black;">{{ r.title }}</b></span>
 	            </div>
 	            <div class="card-content">
-	              <p style="color:white;">{{ r.description }}</p>
+	              <p style="color:white;">{{ r.description }}  {{r.image}}</p>
 				  <label style="color:white;"><b>AR${{ r.priceDays }} (per day and person)</b></label><br>
 				  <label style="color:white;"><b>{{ r.maxGuest }} available beds</b></label><br>
 				  <label style="color:white;"><b>{{ r.city.name }} City</b></label>
