@@ -2,13 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cfc2956d-2134-474e-b6f4-f5f11389ecf2" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/saborto/Hospedajes/migrations/0001_initial.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/saborto/Hospedajes/migrations/0002_auto_20171110_2014.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/saborto/Hospedajes/migrations/0003_auto_20171122_1405.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/saborto/Hospedajes/migrations/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/saborto/db.sqlite3" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/saborto/media/image/20160621_204656.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/saborto/media/image/20160622_123746.jpg" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/saborto/Hospedajes/models.py" afterPath="$PROJECT_DIR$/saborto/Hospedajes/models.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/saborto/Hospedajes/views.py" afterPath="$PROJECT_DIR$/saborto/Hospedajes/views.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/saborto/db.sqlite3" afterPath="$PROJECT_DIR$/saborto/db.sqlite3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/saborto/saborto/settings.py" afterPath="$PROJECT_DIR$/saborto/saborto/settings.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/saborto/saborto/urls.py" afterPath="$PROJECT_DIR$/saborto/saborto/urls.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/saborto/templates/search_rooms.html" afterPath="$PROJECT_DIR$/saborto/templates/search_rooms.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/saborto/templates/show_rooms.html" afterPath="$PROJECT_DIR$/saborto/templates/show_rooms.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -20,11 +24,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="models.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/saborto/Hospedajes/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="774">
-              <caret line="43" column="16" lean-forward="false" selection-start-line="43" selection-start-column="6" selection-end-line="43" selection-end-column="16" />
+            <state relative-caret-position="517">
+              <caret line="44" column="16" lean-forward="false" selection-start-line="44" selection-start-column="6" selection-end-line="44" selection-end-column="16" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
@@ -37,16 +41,20 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="198">
               <caret line="11" column="43" lean-forward="false" selection-start-line="11" selection-start-column="43" selection-end-line="11" selection-end-column="43" />
-              <folding />
+              <folding>
+                <element signature="n#style#0;n#label#2;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <marker date="1511386094339" expanded="false" signature="707:719" ph="..." />
+                <marker date="1511386094339" expanded="false" signature="875:887" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/saborto/Hospedajes/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="232">
-              <caret line="19" column="82" lean-forward="false" selection-start-line="19" selection-start-column="82" selection-end-line="19" selection-end-column="82" />
+            <state relative-caret-position="540">
+              <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
               <folding>
                 <element signature="e#0#35#0" expanded="true" />
               </folding>
@@ -77,8 +85,8 @@
       <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/saborto/saborto/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="157">
-              <caret line="19" column="42" lean-forward="false" selection-start-line="19" selection-start-column="42" selection-end-line="19" selection-end-column="42" />
+            <state relative-caret-position="229">
+              <caret line="25" column="57" lean-forward="false" selection-start-line="25" selection-start-column="57" selection-end-line="25" selection-end-column="57" />
               <folding>
                 <element signature="e#641#673#0" expanded="true" />
               </folding>
@@ -96,12 +104,12 @@
       <list>
         <option value="$PROJECT_DIR$/saborto/Hospedajes/admin.py" />
         <option value="$PROJECT_DIR$/saborto/templates/index.html" />
-        <option value="$PROJECT_DIR$/saborto/Hospedajes/models.py" />
-        <option value="$PROJECT_DIR$/saborto/saborto/urls.py" />
         <option value="$PROJECT_DIR$/saborto/saborto/settings.py" />
         <option value="$PROJECT_DIR$/saborto/templates/search_rooms.html" />
-        <option value="$PROJECT_DIR$/saborto/Hospedajes/views.py" />
         <option value="$PROJECT_DIR$/saborto/templates/show_rooms.html" />
+        <option value="$PROJECT_DIR$/saborto/Hospedajes/models.py" />
+        <option value="$PROJECT_DIR$/saborto/Hospedajes/views.py" />
+        <option value="$PROJECT_DIR$/saborto/saborto/urls.py" />
       </list>
     </option>
   </component>
@@ -145,18 +153,6 @@
               <item name="saborto" type="462c0819:PsiDirectoryNode" />
               <item name="Hospedajes" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="TpMetodologia" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TpMetodologia" type="462c0819:PsiDirectoryNode" />
-              <item name="saborto" type="462c0819:PsiDirectoryNode" />
-              <item name="saborto" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TpMetodologia" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TpMetodologia" type="462c0819:PsiDirectoryNode" />
-              <item name="saborto" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -194,16 +190,16 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-482" y="27" width="1600" height="873" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18709677" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32967034" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35851648" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35851648" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -212,7 +208,6 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -623,40 +618,44 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/saborto/templates/show_rooms.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="11" column="43" lean-forward="false" selection-start-line="11" selection-start-column="43" selection-end-line="11" selection-end-column="43" />
+          <folding>
+            <element signature="n#style#0;n#label#2;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <marker date="1511386094339" expanded="false" signature="707:719" ph="..." />
+            <marker date="1511386094339" expanded="false" signature="875:887" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/saborto/saborto/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="157">
-          <caret line="19" column="42" lean-forward="false" selection-start-line="19" selection-start-column="42" selection-end-line="19" selection-end-column="42" />
+        <state relative-caret-position="229">
+          <caret line="25" column="57" lean-forward="false" selection-start-line="25" selection-start-column="57" selection-end-line="25" selection-end-column="57" />
           <folding>
             <element signature="e#641#673#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/saborto/Hospedajes/models.py">
+    <entry file="file://$PROJECT_DIR$/saborto/Hospedajes/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="774">
-          <caret line="43" column="16" lean-forward="false" selection-start-line="43" selection-start-column="6" selection-end-line="43" selection-end-column="16" />
+        <state relative-caret-position="540">
+          <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
           <folding>
-            <element signature="e#0#39#0" expanded="true" />
+            <element signature="e#0#35#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/saborto/templates/show_rooms.html">
+    <entry file="file://$PROJECT_DIR$/saborto/Hospedajes/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="11" column="43" lean-forward="false" selection-start-line="11" selection-start-column="43" selection-end-line="11" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/saborto/Hospedajes/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
-          <caret line="19" column="82" lean-forward="false" selection-start-line="19" selection-start-column="82" selection-end-line="19" selection-end-column="82" />
+        <state relative-caret-position="517">
+          <caret line="44" column="16" lean-forward="false" selection-start-line="44" selection-start-column="6" selection-end-line="44" selection-end-column="16" />
           <folding>
-            <element signature="e#0#35#0" expanded="true" />
+            <element signature="e#0#39#0" expanded="true" />
           </folding>
         </state>
       </provider>

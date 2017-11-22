@@ -18,8 +18,13 @@ def show_rooms_view(request):
         date1 = request.GET['date']
         print date1
         property = Property.objects.filter(city = city[0].id, maxGuest__gte = pax)
+
         '''property = DateRental.objects.select_related(id = property_id)'''
         print property
 
+        for indice in range(len(property)):
+            property[indice].comision = property[indice].priceDays * 0.08
+
         return render(request, 'show_rooms.html', {'rooms': property})
+
 
