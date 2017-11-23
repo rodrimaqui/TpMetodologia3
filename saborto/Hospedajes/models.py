@@ -47,5 +47,5 @@ class DateRental(models.Model):
     property = models.ForeignKey(Property)
     reservation = models.ForeignKey(Reservation, blank=True, null=True)
 
-    '''def __str__(self):
-        return self.date'''
+    def __str__(self):
+        return str(self.date)

@@ -9,15 +9,15 @@
 	          <div class="card card light-green darken-2 z-depth-5">
 	            <div class="card-image">
 
-	              <img src="{{r.image.url}}" class="responsive-img">
-	              <span class="card-title"><b style="text-shadow: 3px 2px 0px black;">{{ r.title }}</b></span>
+	              <img src="{{r.property.image.url}}" class="responsive-img">
+	              <span class="card-title"><b style="text-shadow: 3px 2px 0px black;">{{ r.property.title }} </b></span>
 	            </div>
 	            <div class="card-content">
-	              <p style="color:white;">{{ r.description }}  {{r.image}}</p>
-				  <label style="color:white;"><b>AR${{ r.priceDays }} (per day and person)</b></label><br>
-				  <label style="color:white;"><b>AR${{ r.comision}} (comision)</b></label><br>
-				  <label style="color:white;"><b>{{ r.maxGuest }} available beds</b></label><br>
-				  <label style="color:white;"><b>{{ r.city.name }} City</b></label>
+	              <p style="color:white;">{{ r.property.description }} </p>
+				  <label style="color:white;"><b>AR${{ r.property.priceDays }} (per day and person) aa {{r.property}}  </b></label><br>
+				  <label style="color:white;"><b>AR${{ r.property.comision}} (comision)</b></label><br>
+				  <label style="color:white;"><b>{{ r.property.maxGuest }} available beds</b></label><br>
+				  <label style="color:white;"><b>{{ r.property.city.name }} City</b></label>
 	            </div>
 	            <div class="card-action">
 	              <button type="submit" class="btn waves-effect waves-light right">Rent</button>
