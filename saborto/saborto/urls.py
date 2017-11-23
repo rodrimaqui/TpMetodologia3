@@ -24,7 +24,6 @@ urlpatterns = [
     url(r'^$', index, name = 'index'),
     url(r'^search_rooms/', search_rooms_view, name = 'search'),
     url(r'^show_rooms/', show_rooms_view, name = 'show'),
+    url(r'^show_single_room/(?P<room_id>\d+)', show_singleR_view, name = 'single')
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
-
-
