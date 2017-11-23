@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, render_to_response
 from models import *
 
 # Create your views here.
@@ -28,3 +28,6 @@ def show_rooms_view(request):
         return render(request, 'show_rooms.html', {'rooms': property})
 
 
+def show_singleR_view(request, room_id):
+    singular_room = Property.objects.get(id=room_id)
+    return render_to_response('show_single_room.html', {'room': singular_room})
