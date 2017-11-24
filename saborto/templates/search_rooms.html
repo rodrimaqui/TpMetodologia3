@@ -1,6 +1,30 @@
 {% extends "index.html" %}
 {% block content %}
-<!--<div class="container">-->
+<div class="container">
+
+	<div class="row">
+		<div class="">
+			<h2 style="text-shadow: 3px 2px 0px #ff9966;">Search for rooms</h2>
+			<div class="card naranjita lighten-2">
+				<form method="GET" action="{% url 'show' %}" class="card-content"> {% csrf_token %}
+					<div class="input-field">
+					    <i class="material-icons prefix">location_city</i>
+					    <input placeholder="Insert city" name="city" id="icon_prefix" type="text" class="validate">
+					</div>
+					<div class="input-field">
+					    <i class="material-icons prefix">accessibility</i>
+					    <input placeholder="Insert guest amount" name="pax" id="icon_prefix" type="text" class="validate">
+					</div>
+					<div class="input-field">
+					    <i class="material-icons prefix">view_comfy</i>
+					    <input type="date" name="date" placeholder="date">
+					</div>
+					<button type="submit" class="btn waves-effect waves-light right"><b>Search</b></button><br><br>
+		     	</form>
+		    </div>
+	    </div>
+	</div>
+
 <style type="text/css">
 	li:hover {
 		background-color: #84ffff  !important;
@@ -11,20 +35,20 @@
 	.collection .collection-item {
 		border-bottom: 0px solid #e0e0e0;
 	}
+	::placeholder {
+   color:    black;
+	}
+	.naranjita {
+		background-color: #ff9966 !important;
+	}
+	.btn{
+		background-color: #84ffff !important; 
+		color: black !important;
+	}
+	.btn:hover {
+		color: #18ffff !important; 
+		background-color: black !important;
+	}
 </style>
 
-
-	<div class="row">
-		<div class="negrita card blue-grey darken-1">
-			<form method="GET" action="{% url 'show' %}" class="card-content"> {% csrf_token %}
-
-				<input type="text" name="city" placeholder="City"><br>
-				<input type="text" name="pax" placeholder="Guest amount"><br>
-				<input type="date" name="date" placeholder="date"><br>
-				<br>
-
-				<button type="submit" class="btn waves-effect waves-light right">Search</button><br>
-	     	</form>
-	    </div>
-	</div>
-{% endblock %}%}
+{% endblock %}

@@ -5,7 +5,7 @@
 	<h2>{{ room.title }}</h2>
 		
 		<div class="row">
-	        <!--<div class="col l6">-->
+
 	          <div class="card card light-green darken-2 z-depth-5">
 	            <div class="card-image">
 
@@ -13,13 +13,13 @@
 	              <span class="card-title"><b style="text-shadow: 3px 2px 0px black;">{{ r.title }}</b></span>
 	            </div>
 	            <div class="card-content">
-	              <p style="color:white;">{{ room.description }}  {{r.image}}</p>
+	              <p style="color:white;">{{ room.description }}</p>
 				  <label style="color:white;"><b>AR${{ room.priceDays }} (per day and person)</b></label><br>
 				  <label style="color:white;"><b>AR${{ room.comision}} (comision)</b></label><br>
 				  <label style="color:white;"><b>{{ room.maxGuest }} available beds</b></label><br>
 				  <label style="color:white;"><b>{{ room.city.name }} City</b></label>
 	            </div>
-	            <form method="GET" action="{% url '' %}" class="card-content"> {% csrf_token %}
+	            <form method="GET" action="" class="card-content"> {% csrf_token %}
 
 					<input type="text" name="name" placeholder="Name"><br>
 					<input type="text" name="surname" placeholder="Surname"><br>
@@ -29,9 +29,9 @@
 					<button type="submit" class="btn waves-effect waves-light right">Rent</button><br>
 				</form>
 	          </div>
-	        <!--</div>-->
+	       
       	</div>
-     
+
 </div>
 {% endblock %}
 
