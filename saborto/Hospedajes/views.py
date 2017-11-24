@@ -53,16 +53,14 @@ def show_singleR_view(request,room_id):
 
     elif request.method == 'POST':
         try:
-            print 'ENTROOOOOOOOO PASOOOOOOOOO 1 '
+
             property = Property.objects.get(id=request.POST['propertyId'])
 
-            print 'ENTROOOOOOOOO PASOOOOOOOOO 2'
+
 
             if dateAble(request.POST['fromD'],request.POST['toD'],property):
-                print 'ENTROOOOOOOOO PASOOOOOOOOO 3 '
                 guest = Guest(name=request.POST['name'],surename = request.POST['surname'], email = request.POST['email'])
                 guest.save()
-                print 'ENTROOOOOOOOO PASOOOOOOOOO 4'
                 code = random.randint(0, 850000000000000)
 
 
@@ -70,14 +68,20 @@ def show_singleR_view(request,room_id):
                 reservation = Reservation(code = code,total = 0, property = property, guest = guest)
 
                 reservation.save()
-                print 'ENTROOOOOOOOO PASOOOOOOOOO 5'
-                '''date = DateRental.objects.get(property = property, date = request.POST['date'])
-                date.reservation = reservation
 
-                date.save()'''
+
 
                 saveRangeDate(datetime.datetime.strptime(request.POST['fromD'], "%Y-%m-%d").date(), datetime.datetime.strptime(request.POST['toD'], "%Y-%m-%d").date(), reservation, property)
-                print 'ENTROOOOOOOOO PASOOOOOOOOO 6'
+
+                print reservation.property.priceDays
+
+                countDays = amount(datetime.datetime.strptime(request.POST['fromD'], "%Y-%m-%d").date(),datetime.datetime.strptime(request.POST['toD'], "%Y-%m-%d").date())
+
+                print countDays
+
+                reservation.total = reservation.property.priceDays * countDays
+                reservation.save()
+
 
             return render_to_response('index.html')
 
@@ -105,3 +109,11 @@ def saveRangeDate(fromD, toD, reservation, property):
         dateRent.reservation = reservation
         dateRent.save()
         fromD = fromD + timedelta(days=1)
+
+def amount(fromD,toD):
+    countD = 0
+    while(fromD <= toD):
+        countD = countD +1
+        fromD = fromD + timedelta(days=1)
+        print countD
+    return countD
