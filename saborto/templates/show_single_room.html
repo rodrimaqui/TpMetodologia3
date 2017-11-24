@@ -2,40 +2,117 @@
 {% block content %}
 <div class="container">
 	
-	<h2>{{ room.title }}</h2>
+	<h2 style="text-shadow: 3px 2px 0px #ff9966;"><b>Property properties</b></h2>
 		
-		<div class="row">
-	        <!--<div class="col l6">-->
-	          <div class="card card light-green darken-2 z-depth-5">
-	            <div class="card-image">
-
-	              <img src="{{room.property.image.url}}" class="responsive-img">
-	              <span class="card-title"><b style="text-shadow: 3px 2px 0px black;">{{ r.property.title }}</b></span>
-	            </div>
-	            <div class="card-content">
-	              <p style="color:white;">{{ room.property.description }}  {{r.property.image}}</p>
-				  <label style="color:white;"><b>AR${{ room.property.priceDays }} (per day and person)</b></label><br>
-				  <label style="color:white;"><b>8% of (comision)</b></label><br>
-				  <label style="color:white;"><b>{{ room.maxGuest }} available beds</b></label><br>
-				  <label style="color:white;"><b>{{ room.property.city.name }} City</b></label>
-	            </div>
-	            <form method="POST"  class="card-content">
-
-					<input type="text" name="propertyId" value="{{room.property.id}}"><br>
-					<input type="text" name="name" placeholder="Name"><br>
-					<input type="text" name="surname" placeholder="Surname"><br>
-					<input type="email" name="email" placeholder="email"><br>
-					<input type="date" name="fromD" placeholder="date"><br>
-					<input type="date" name="toD" placeholder="date"><br>
-					<br>
-
-					<button type="submit" class="btn waves-effect waves-light right">Rent</button><br>
-				</form>
-	          </div>
-	        <!--</div>-->
-      	</div>
-     
+	<div class="z-depth-5">
+	<div class="naranjita">
+	<h4 style="text-shadow: 3px 2px 0px black;" class="center"><b>{{ room.property.title }}</b></h4>
+	    <div class="">
+	        <img src="{{room.property.image.url}}" class="responsive-img z-depth-5">
+	    </div>
+	    <div class="row">
+	    <div class="col l12">
+	    <div class="sida">
+	    	<p><b>{{ room.property.description }}</b></p>
+	    	<table class="table z-depth-5" style="background-color: #84ffff;">
+	    		<tr>
+	    			<td><b class="sida">Price per day and person</b></td>
+	    			<td><b>AR$ {{ room.property.priceDays }}</b></td>
+	    		</tr>
+	    		<!--<tr>
+	    			<td>Comision</td>
+	    			<td>{{ room.property.comision }}</td>
+	    		</tr>-->
+	    		<tr>
+	    			<td><b class="sida">Guests maximum amount</b></td>
+	    			<td><b>{{ room.property.maxGuest }}</b></td>
+	    		</tr>
+		        <tr>
+	    			<td><b class="sida">Location city</b></td>
+	    			<td><b>{{ room.property.city.name }}</b></td>
+	    		</tr>
+		        
+			</table>
+		</div>
+		</div>
+	    </div>
+	    <div style="padding-bottom: 30px" class="row">
+	    	<h4 style="text-shadow: 3px 2px 0px black;" class="center"><b>Rent this Property!</b></h4>
+	    	<div class="col l12" style="padding-right: 30px; padding-left: 30px">
+	        <form method="POST"  class="card-content">
+	        	<b>
+				<input type="hidden" name="propertyId" value="{{room.property.id}}"><br>
+				<input type="text" name="name" placeholder="Name"><br>
+				<input type="text" name="surname" placeholder="Surname"><br>
+				<input type="email" name="email" placeholder="E - mail"><br>
+				<div class="row">
+				<div class="col l6">
+					<h5>Arrival day</h5>
+					<input type="date" name="fromD" placeholder="date">
+				</div>
+				<div class="col l6">
+					<h5>Abandonment day</h5>
+					<input type="date" name="toD" placeholder="date">
+				</div>
+				</b>
+				</div>
+				<button style="padding-right: 30px" type="submit" class="btn waves-effect waves-light right">
+					<b>Rent</b>
+				</button>
+			</form>
+			</div>
+		</div>
+	</div>
+	</div>
 </div>
+
+<style type="text/css">
+
+	h4 {
+		color: #84ffff;
+		padding-top: 15px;
+	}
+	li:hover {
+		background-color: #84ffff  !important;
+	}
+	.collection {
+		border: 0px solid #e0e0e0;
+	}
+	.collection .collection-item {
+		border-bottom: 0px solid #e0e0e0;
+	}
+	::placeholder {
+   color:    black;
+	}
+	.naranjita {
+		background-color: #ff9966 !important;
+	}
+	.btn{
+		background-color: #84ffff !important; 
+		color: black !important;
+	}
+	.btn:hover {
+		color: #18ffff !important; 
+		background-color: black !important;
+	}
+	a {
+		color: black !important;
+	}
+	a:hover{
+		color: #18ffff !important; 
+	}
+	.ojetemierda{
+		padding-top: 15px;
+	}
+	.sida {
+		padding-left: 30px;
+		padding-right: 30px;
+	}
+	label {
+		color: black;
+	}
+</style>
+
 {% endblock %}
 
 
