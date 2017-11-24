@@ -1,6 +1,7 @@
 from django.shortcuts import render, render_to_response
 from models import *
 import datetime
+from datetime import timedelta
 import random
 
 # Create your views here.
@@ -23,9 +24,10 @@ def show_rooms_view(request):
 
             definitiveProp = []
 
+
             for i in property:
                 try:
-                    property2 =  DateRental.objects.get(property = i, date = datetime.datetime.strptime(date,'%Y-%m-%d').date())
+                    property2 =  DateRental.objects.get(property = i,date = date)
                     definitiveProp.append(property2)
                 except:
                     pass
@@ -35,6 +37,7 @@ def show_rooms_view(request):
 
         except:
             definitiveProp = []
+            print 'SE ROMPIO TOOOODOOOO'
         return render(request, 'show_rooms.html', {'rooms': definitiveProp})
             #date__gt = datetime.datetime.strptime(date1,'%Y-%m-%d').date() less
             #date__gte = datetime.datetime.strptime(date1,'%Y-%m-%d').date() greater
@@ -50,22 +53,55 @@ def show_singleR_view(request,room_id):
 
     elif request.method == 'POST':
         try:
-            guest = Guest(name=request.POST['name'],surename = request.POST['surname'], email = request.POST['email'])
-            guest.save()
+            print 'ENTROOOOOOOOO PASOOOOOOOOO 1 '
+            property = Property.objects.get(id=request.POST['propertyId'])
 
-            code = random.randint(0, 850000000000000)
+            print 'ENTROOOOOOOOO PASOOOOOOOOO 2'
 
-            property = Property.objects.get(id = request.POST['propertyId'])
+            if dateAble(request.POST['fromD'],request.POST['toD'],property):
+                print 'ENTROOOOOOOOO PASOOOOOOOOO 3 '
+                guest = Guest(name=request.POST['name'],surename = request.POST['surname'], email = request.POST['email'])
+                guest.save()
+                print 'ENTROOOOOOOOO PASOOOOOOOOO 4'
+                code = random.randint(0, 850000000000000)
 
-            reservation = Reservation(code = code,total = 0, property = property, guest = guest)
 
-            reservation.save()
 
-            date = DateRental.objects.get(property = property, date = request.POST['date'])
-            date.reservation = reservation
+                reservation = Reservation(code = code,total = 0, property = property, guest = guest)
 
-            date.save()
+                reservation.save()
+                print 'ENTROOOOOOOOO PASOOOOOOOOO 5'
+                '''date = DateRental.objects.get(property = property, date = request.POST['date'])
+                date.reservation = reservation
+
+                date.save()'''
+
+                saveRangeDate(datetime.datetime.strptime(request.POST['fromD'], "%Y-%m-%d").date(), datetime.datetime.strptime(request.POST['toD'], "%Y-%m-%d").date(), reservation, property)
+                print 'ENTROOOOOOOOO PASOOOOOOOOO 6'
 
             return render_to_response('index.html')
+
         except:
             print 'se rompio todoooooooooooooooooooooooo'
+
+def dateAble(fromD,toD,property):
+    able = True
+    try:
+        auxDate = DateRental.objects.filter(date__range=[fromD, toD],property = property)
+        for a in auxDate:
+            if a.reservation is not None:
+                able = False
+                break
+
+        return able
+
+    except:
+        able = False
+        return able
+
+def saveRangeDate(fromD, toD, reservation, property):
+    while(fromD <= toD):
+        dateRent = DateRental.objects.get(date=fromD,property = property)
+        dateRent.reservation = reservation
+        dateRent.save()
+        fromD = fromD + timedelta(days=1)
