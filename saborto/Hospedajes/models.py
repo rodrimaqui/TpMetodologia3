@@ -25,7 +25,7 @@ class Property(models.Model):
     title = models.CharField(max_length=50)
     numberCard = models.IntegerField()
     maxGuest = models.IntegerField()
-    comision = models.DecimalField(max_digits=3, decimal_places=2)
+    #comision = models.DecimalField(max_digits=3, decimal_places=2)
     city = models.ForeignKey(City)
     #reservation = models.ForeignKey(Reservation)
     user = models.ForeignKey(User)
