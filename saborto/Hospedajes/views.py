@@ -1,3 +1,4 @@
+from django.http import HttpResponseRedirect
 from django.shortcuts import render, render_to_response
 from models import *
 import datetime
@@ -32,9 +33,6 @@ def show_rooms_view(request):
                 except:
                     pass
 
-                    '''for indice in range(len(property)):
-            property[indice].comision = property[indice].priceDays * 0.08'''
-
         except:
             definitiveProp = []
             print 'SE ROMPIO TOOOODOOOO'
@@ -56,20 +54,14 @@ def show_singleR_view(request,room_id):
 
             property = Property.objects.get(id=request.POST['propertyId'])
 
-
-
             if dateAble(request.POST['fromD'],request.POST['toD'],property):
                 guest = Guest(name=request.POST['name'],surename = request.POST['surname'], email = request.POST['email'])
                 guest.save()
                 code = random.randint(0, 850000000000000)
 
-
-
                 reservation = Reservation(code = code,total = 0, property = property, guest = guest)
 
                 reservation.save()
-
-
 
                 saveRangeDate(datetime.datetime.strptime(request.POST['fromD'], "%Y-%m-%d").date(), datetime.datetime.strptime(request.POST['toD'], "%Y-%m-%d").date(), reservation, property)
 
@@ -82,11 +74,18 @@ def show_singleR_view(request,room_id):
                 reservation.total = (reservation.property.priceDays * countDays) * 1.08
                 reservation.save()
 
+                reservation2 = Reservation.objects.get(property = property, guest = guest,code = code)
 
-            return render_to_response('index.html')
+                print reservation2.code
+
+                #return render_to_response('index.html')
+                return render(request, 'details.html', {'reservation': reservation2})
 
         except:
             print 'se rompio todoooooooooooooooooooooooo'
+    else:
+        return render_to_response('index.html')
+
 
 def dateAble(fromD,toD,property):
     able = True
