@@ -83,7 +83,7 @@ def show_singleR_view(request,room_id):
                 reservation.save()
 
 
-            return render_to_response('index.html')
+            return render_to_response('details.html')
 
         except:
             print 'se rompio todoooooooooooooooooooooooo'

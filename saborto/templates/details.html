@@ -1,0 +1,64 @@
+{% extends "index.html" %}
+{% block content %}
+<div class="container">
+	
+	<h2 style="text-shadow: 3px 2px 0px #84ffff;">Reservation details</h2>
+		{% for r in reservation %}
+		<div class="row">
+	        <div class="col l6">
+		        <div class=" card naranjita z-depth-5">
+		            <div class="card-image">
+
+		              	<img src="{{r.property.image.url}}" class="responsive-img">
+
+		              	<span class="card-title"><b style="text-shadow: 3px 2px 0px black;">{{ r.property.city.name }}</b></span>
+		            </div>
+		            <div class="card-content">
+		            	<span>Max Guests: <strong>{{ r.property.maxGuest }}</strong></span>
+		            </div>
+		        </div>
+				  <button type="submit"><a href="{% url 'single' room_id=r.id %}" >See</a></button>
+	          </div>
+	          <div class="col l6">
+	          	
+	          </div>
+	        </div>
+      	</div>
+	    {% endfor %}
+     
+</div>
+
+<style type="text/css">
+	h5 {
+		color: black;
+	}
+	li:hover {
+		background-color: #84ffff  !important;
+	}
+	.collection {
+		border: 0px solid #e0e0e0;
+	}
+	.collection .collection-item {
+		border-bottom: 0px solid #e0e0e0;
+	}
+	::placeholder {
+   color:    black;
+	}
+	.naranjita {
+		background-color: #ff9966 !important;
+	}
+	.btn{
+		background-color: #84ffff !important; 
+		color: black !important;
+	}
+	.btn:hover {
+		color: #18ffff !important; 
+		background-color: black !important;
+	}
+</style>
+
+{% endblock %}
+
+
+
+	
