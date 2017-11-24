@@ -32,8 +32,8 @@ def show_rooms_view(request):
                 except:
                     pass
 
-            for indice in range(len(property)):
-                property[indice].comision = property[indice].priceDays * 0.08
+                    '''for indice in range(len(property)):
+            property[indice].comision = property[indice].priceDays * 0.08'''
 
         except:
             definitiveProp = []
@@ -79,7 +79,7 @@ def show_singleR_view(request,room_id):
 
                 print countDays
 
-                reservation.total = reservation.property.priceDays * countDays
+                reservation.total = (reservation.property.priceDays * countDays) * 1.08
                 reservation.save()
 
 
