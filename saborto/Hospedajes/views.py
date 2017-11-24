@@ -1,5 +1,5 @@
 from django.http import HttpResponseRedirect
-from django.shortcuts import render, render_to_response
+from django.shortcuts import render, render_to_response, redirect
 from models import *
 import datetime
 from datetime import timedelta
@@ -79,13 +79,19 @@ def show_singleR_view(request,room_id):
                 print reservation2.code
 
                 #return render_to_response('index.html')
-                return render(request, 'details.html', {'reservation': reservation2})
+                return redirect('details', id=reservation.id)
+
 
         except:
             print 'se rompio todoooooooooooooooooooooooo'
     else:
-        return render_to_response('index.html')
+        return render('index.html')
 
+def aaa(request,id):
+    if request.method == 'GET':
+        r = Reservation.objects.get(id = id )
+
+        return render(request,'details.html',{'r':r})
 
 def dateAble(fromD,toD,property):
     able = True

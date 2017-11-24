@@ -2,9 +2,9 @@
 {% block content %}
 <div class="container">
 	
-	<h2 style="text-shadow: 3px 2px 0px #84ffff;">Room search results</h2>
-		{% for r in rooms %}
+	<h2 style="text-shadow: 3px 2px 0px #84ffff;"><b>Room search results</b></h2>
 		<div class="row">
+		{% for r in rooms %}
 	        <div class="col l6">
 	          <div class=" card naranjita z-depth-5">
 	            <div class="card-image">
@@ -15,22 +15,17 @@
 	            </div>
 	            <div class="card-content">
 
-				  <h5><i>{{ r.property.city.name }} City</i></h5>
+				  <h5 style="color: black"><i>{{ r.property.city.name }} City</i></h5>
+				  <a href="{% url 'single' room_id=r.id %}"><button class="btn waves-effect waves-light right" type="submit"><b>More details</b></button></a>
 	            </div>
-
 	            </div>
-				  <button type="submit"><a href="{% url 'single' room_id=r.id %}" >See</a></button>
 	          </div>
-	        </div>
-      	</div>
+	        
 	    {% endfor %}
-     
+     	</div>
 </div>
 
 <style type="text/css">
-	h5 {
-		color: black;
-	}
 	li:hover {
 		background-color: #84ffff  !important;
 	}
@@ -53,6 +48,12 @@
 	.btn:hover {
 		color: #18ffff !important; 
 		background-color: black !important;
+	}
+	a {
+		color: black !important;
+	}
+	a:hover{
+		color: #18ffff !important; 
 	}
 </style>
 
