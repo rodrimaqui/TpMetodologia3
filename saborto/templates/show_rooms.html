@@ -2,11 +2,11 @@
 {% block content %}
 <div class="container">
 	
-	<h2>Rooms search results</h2>
+	<h2 style="text-shadow: 3px 2px 0px #84ffff;">Room search results</h2>
 		{% for r in rooms %}
 		<div class="row">
 	        <div class="col l6">
-	          <div class="card card light-green darken-2 z-depth-5">
+	          <div class=" card naranjita z-depth-5">
 	            <div class="card-image">
 
 	              <img src="{{r.property.image.url}}" class="responsive-img">
@@ -14,11 +14,9 @@
 	              <span class="card-title"><b style="text-shadow: 3px 2px 0px black;">{{ r.property.title }}</b></span>
 	            </div>
 	            <div class="card-content">
-	              <p style="color:white;">{{ r.property.description }}  {{r.image}}</p>
-				  <label style="color:white;"><b>AR${{ r.property.priceDays }} (per day and person)</b></label><br>
-				  <label style="color:white;"><b>AR${{ r.property.comision}} (comision)</b></label><br>
-				  <label style="color:white;"><b>{{ r.property.maxGuest }} available beds</b></label><br>
-				  <label style="color:white;"><b>{{ r.property.city.name }} City</b></label>
+
+				  <h5><i>{{ r.property.city.name }} City</i></h5>
+	            </div>
 
 	            </div>
 				  <button type="submit"><a href="{% url 'single' room_id=r.id %}" >See</a></button>
@@ -28,6 +26,36 @@
 	    {% endfor %}
      
 </div>
+
+<style type="text/css">
+	h5 {
+		color: black;
+	}
+	li:hover {
+		background-color: #84ffff  !important;
+	}
+	.collection {
+		border: 0px solid #e0e0e0;
+	}
+	.collection .collection-item {
+		border-bottom: 0px solid #e0e0e0;
+	}
+	::placeholder {
+   color:    black;
+	}
+	.naranjita {
+		background-color: #ff9966 !important;
+	}
+	.btn{
+		background-color: #84ffff !important; 
+		color: black !important;
+	}
+	.btn:hover {
+		color: #18ffff !important; 
+		background-color: black !important;
+	}
+</style>
+
 {% endblock %}
 
 

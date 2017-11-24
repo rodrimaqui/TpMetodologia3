@@ -8,7 +8,7 @@ import random
 
 def index(request):
     if request.method == 'GET':
-        return render(request, 'index.html')
+        return render(request, 'search_rooms.html')
 
 def search_rooms_view(request):
     if request.method == 'GET':
